@@ -1,0 +1,15 @@
+spring:
+  cloud:
+    config:
+      name: cloudConfigServer
+      server:
+        git:
+          uri: https://github.com/drewterrell29/ConfigData
+  application:
+    name: Config Server
+server:
+  port: 8888
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8080/eureka/
